@@ -1,0 +1,10 @@
+{
+  "priority": 5,
+  "title": "AMRRIC Portal",
+  "shortDescription": "Developed a web portal for Amrric enabling administrators to manage app users, oversee animal records, and access detailed reports for improved operational oversight and data-driven decision-making.",
+  "cover": "/projectimages/amrricportal.png",
+  "livePreview": "https://amrricportal.azurewebsites.net",
+  "type": "Client Work 🙍‍♂️",
+  "siteAge": "1 month old",
+  "technologies": ["react","node-js", "css", "js","html","mysql","azure"]
+}

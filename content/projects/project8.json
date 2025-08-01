@@ -1,0 +1,10 @@
+{
+  "priority": 8,
+  "title": "JPL Auto System Portal",
+  "shortDescription": "Developed an admin web portal for JPL Auto System (JPL Marketing Suite – Australia) using Laravel, enabling administrators to modify car details based on customer requirements with CI/CD deployment via cPanel.",
+  "cover": "/projectimages/jplauto.png",
+  "livePreview": "https://www.jplauto.com.au/",
+  "type": "Client Work 🙍‍♂️",
+  "siteAge": "1 month old",
+  "technologies": ["laravel","php", "css", "js","html","mysql","cpanel"]
+}

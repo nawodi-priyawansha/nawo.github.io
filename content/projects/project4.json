@@ -1,0 +1,10 @@
+{
+  "priority": 4,
+  "title": "Brownways Webtrack - IOS App",
+  "shortDescription": "Developed a comprehensive logistics and freight management platform for Brownways, including real-time GEO tracking, a custom client portal, driver app, automated reporting, third-party carrier integration, sign-on-glass, secure data tools, and advanced operational and financial oversight.",
+  "cover": "/projectimages/bwios.png",
+  "livePreview": "https://apps.apple.com/au/app/brownways-webtrack/id1666182189",
+  "type": "Client Work 🙍‍♂️",
+  "siteAge": "1 month old",
+  "technologies": ["ReactNative","laravel", "css", "mysql","bitbucket","apple","cpanel"]
+}

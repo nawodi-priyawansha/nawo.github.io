@@ -1,0 +1,10 @@
+{
+  "priority": 7,
+  "title": "BEFROST-VALHALLA Performance",
+  "shortDescription": "Developed a web and mobile portal for BEFROST – Valhalla Performance. The admin portal manages users, workouts, and daily routines, while the user portal provides workout guides, progress tracking, goal management, and secure access to reports and payments.",
+  "cover": "/projectimages/bifrostportal.png",
+  "livePreview": "https://bifrost.vpbifrost.jplms.com.au/login",
+  "type": "Client Work 🙍‍♂️",
+  "siteAge": "1 month old",
+  "technologies": ["laravel","php", "css", "js","html","mysql","cpanel"]
+}

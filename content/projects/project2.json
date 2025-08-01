@@ -1,0 +1,10 @@
+{
+  "priority": 2,
+  "title": "AMRRIC - IOS App",
+  "shortDescription": "AMRIC is a mobile app for Australian Veterans to track animal information. Got a Huge Knowledge about Xamarin, and Entity Framework. Most imrotantly got to Work with an Australian Team. Technology used is Xamarin / MAUI / C# / MySQL /Entity Framework",
+  "cover": "/projectimages/amrricios.png",
+  "livePreview": "https://apps.apple.com/au/app/amrric/id1507671381",
+  "type": "Client Work 🙍‍♂️",
+  "siteAge": "1 month old",
+  "technologies": ["xamarin","maui","csharp","dotnet","bitbucket", "css", "apple","azure","mysql"]
+}

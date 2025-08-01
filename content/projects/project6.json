@@ -1,0 +1,10 @@
+{
+  "priority": 6,
+  "title": "Brownways Webtrack Portal",
+  "shortDescription": "Built a custom web portal for Brownways Pty Ltd, a leading Sydney-based freight company, enabling automated job creation from emails, driver assignments, invoicing, real-time location tracking, and separate portals for clients and drivers to manage logistics operations.",
+  "cover": "/projectimages/bwportal.png",
+  "livePreview": "https://brownwayswebtrack.com.au/",
+  "type": "Client Work 🙍‍♂️",
+  "siteAge": "1 month old",
+  "technologies": ["codeigniter","php", "css", "js","html","mysql","cpanel"]
+}

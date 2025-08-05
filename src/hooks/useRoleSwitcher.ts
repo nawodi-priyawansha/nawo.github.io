@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react'
 
+interface Role {
+  label: string
+  icon: React.ReactNode
+}
 interface RoleSwitcherOptions {
-  roles: string[]
+  roles: Role[]
   interval?: number         // Time between full role switches (in ms)
   typingSpeed?: number      // Time between each character (in ms)
 }
@@ -10,18 +14,20 @@ function useRoleSwitcher({
   roles,
   interval = 2000,
   typingSpeed = 100,
-}: RoleSwitcherOptions): string {
+}: RoleSwitcherOptions): { text: string; icon: React.ReactNode | null } {
   const [displayText, setDisplayText] = useState('')
   const [roleIndex, setRoleIndex] = useState(0)
   const [charIndex, setCharIndex] = useState(0)
   const [isTyping, setIsTyping] = useState(true)
+  const [showIcon, setShowIcon] = useState(false)
 
   useEffect(() => {
     if (!roles.length) return
 
-    const currentRole = roles[roleIndex]
+    const currentRole = roles[roleIndex].label
 
     if (isTyping) {
+      setShowIcon(false)
       if (charIndex < currentRole.length) {
         const timeout = setTimeout(() => {
           setDisplayText(currentRole.slice(0, charIndex + 1))
@@ -29,12 +35,14 @@ function useRoleSwitcher({
         }, typingSpeed)
         return () => clearTimeout(timeout)
       } else {
+        setShowIcon(true)
         const pause = setTimeout(() => {
           setIsTyping(false)
         }, interval)
         return () => clearTimeout(pause)
       }
     } else {
+      setShowIcon(false)
       const backspace = setTimeout(() => {
         if (charIndex > 0) {
           setDisplayText((prev) => prev.slice(0, -1))
@@ -48,7 +56,10 @@ function useRoleSwitcher({
     }
   }, [charIndex, isTyping, roleIndex, roles, interval, typingSpeed])
 
-  return displayText
+  return {
+    text: displayText,
+    icon: showIcon ? roles[roleIndex].icon : null,
+  }
 }
 
 export default useRoleSwitcher

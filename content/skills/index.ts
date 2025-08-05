@@ -248,7 +248,7 @@ export const Full_stack = [
 export const Other_skill = [
     {
         skill_name: "ChatGPT",
-        Image: "/chatgpt-icon.svg",
+        Image: "/chatgpt-icon.png",
         width: 60,
         height: 60,
     },

@@ -19,7 +19,7 @@ export const Skill_data = [
     },
     {
         skill_name: "Python",
-        Image: "/python.svg",
+        Image: "/python.png",
         width: 80,
         height: 80,
     },
@@ -55,7 +55,7 @@ export const Skill_data = [
     },
     {
         skill_name: "Flask",
-        Image: "/flask.svg",
+        Image: "/flask.png",
         width: 80,
         height: 80,
     },
@@ -223,7 +223,7 @@ export const Full_stack = [
     },
     {
         skill_name: "Jenkins",
-        Image: "/jenkins.svg",
+        Image: "/jenkins.png",
         width: 70,
         height: 70,
     },

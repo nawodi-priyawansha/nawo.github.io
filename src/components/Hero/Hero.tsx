@@ -3,12 +3,26 @@ import useRoleSwitcher from '@/hooks/useRoleSwitcher'
 import useRotatingAnimation from '@/hooks/useRotatingAnimation'
 import Image from 'next/image'
 import { HeroImage, ItGirl, Girl, GirlCyber } from '../../utils/images'
+import { WebDevelopmentIcon, AppDevelopmentIcon, DevopsIcon } from '@/utils/icons'
 import Ellipse from './Ellipse'
 
 const Hero = () => {
   const ellipseRef = useRotatingAnimation()
-  const role = useRoleSwitcher({
-    roles: ['FULLSTACK DEVELOPER', 'MOBILE DEVELOPER', 'DEVOPS ENGINEER'],
+  const { text: role, icon: RoleIcon }  = useRoleSwitcher({
+    roles: [
+      {
+        label: 'FULLSTACK DEVELOPER',
+        icon: <Image src={WebDevelopmentIcon} alt="Web Icon" className="w-10 h-10 ml-3" />,
+      },
+      {
+        label: 'MOBILE DEVELOPER',
+        icon: <Image src={AppDevelopmentIcon} alt="App Icon" className="w-10 h-10 ml-3" />,
+      },
+      {
+        label: 'DEVOPS ENGINEER',
+        icon: <Image src={DevopsIcon} alt="DevOps Icon" className="w-10 h-10 ml-3" />,
+      },
+    ],
     interval: 2000, // pause after full word
     typingSpeed: 80 // speed of typing/deleting
   })
@@ -20,7 +34,7 @@ const Hero = () => {
           <h1>
             <span className="text-neutral mb-2 block text-3xl font-bold">Hi,</span>
             <span className="text-neutral mb-2 block text-4xl font-bold">I'm Nawodi Priyawansha</span>
-            <span className="text-accent block text-[1.75rem] font-bold">{role}<span className="animate-pulse">|</span></span>
+            <span className="text-accent flex  text-[1.75rem] font-bold">{role} {RoleIcon}<span className="animate-pulse">|</span></span>
           </h1>
 
           <h2 className="text-neutral mt-3">

@@ -11,7 +11,7 @@ export const Timeline = ({ data, className }) => {
 
   useEffect(() => {
     if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
+      //const rect = ref.current.getBoundingClientRect();
       setHeight(ref.current.scrollHeight);
     }
   }, [ref]);

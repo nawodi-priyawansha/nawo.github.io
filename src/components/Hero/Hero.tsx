@@ -2,9 +2,10 @@
 import useRoleSwitcher from '@/hooks/useRoleSwitcher'
 import useRotatingAnimation from '@/hooks/useRotatingAnimation'
 import Image from 'next/image'
-import { HeroImage, ItGirl, Girl, GirlCyber } from '../../utils/images'
+import { Girl } from '../../utils/images'
 import { WebDevelopmentIcon, AppDevelopmentIcon, DevopsIcon } from '@/utils/icons'
 import Ellipse from './Ellipse'
+import Link from 'next/link'
 
 const Hero = () => {
   const ellipseRef = useRotatingAnimation()
@@ -42,12 +43,13 @@ const Hero = () => {
           </h2>
 
           <div className="mt-6 flex flex-wrap gap-6">
-            <a
-              href="/#contact"
-              aria-label="Connect with me"
-              className="bg-accent min-w-32 cursor-pointer rounded-lg px-[14px] py-[10px] text-center text-sm font-medium text-[#00071E]">
-              Hire Me
-            </a>
+          <Link
+            href="/#contact"
+            aria-label="Connect with me"
+            className="bg-accent min-w-32 cursor-pointer rounded-lg px-[14px] py-[10px] text-center text-sm font-medium text-[#00071E]">
+            Hire Me
+          </Link>
+
             <a
               href="/nawodipriyawansha_resume.pdf"
               download

@@ -1,14 +1,21 @@
-// This tells TypeScript that require.context exists (used by Webpack)
-interface Require {
+// At the top of your file or in a global .d.ts file:
+interface WebpackRequire extends NodeRequire {
   context(
-    path: string,
-    deep?: boolean,
-    filter?: RegExp
+    directory: string,
+    useSubdirectories: boolean,
+    regExp: RegExp
   ): {
     keys(): string[]
-    <T>(id: string): T
+    <T = any>(id: string): T
   }
 }
 
-// Required to extend the `require` keyword
-declare var require: Require
+declare const require: WebpackRequire
+
+// Main logic
+const req = require.context('./icons', false, /\.svg$/)
+
+const icons = req.keys().map((key) => ({
+  name: key.replace('./', '').replace('.svg', ''),
+  src: req<{ default: string }>(key).default ?? req<string>(key)
+}))

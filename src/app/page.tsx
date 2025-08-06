@@ -6,7 +6,7 @@ import ServiceSection from '@/components/Services/ServiceSection'
 import About from '@/components/About/About'
 import Skills from '@/components/Skills/Skills'
 import Experience from '@/components/Experience/Experience'
-import { getAllProjects, getAllTestimonials, getAllEducations } from '@/services'
+import { getAllProjects, getAllEducations } from '@/services'
 
 export default async function Home() {
   const projects = await getAllProjects()

@@ -4,7 +4,7 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Image from 'next/image';
-import { SkillPeramid } from '@/lib/types'
+// import { SkillPeramid } from '@/lib/types'
 
 interface Props {
     src: string;

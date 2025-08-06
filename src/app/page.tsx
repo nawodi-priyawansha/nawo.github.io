@@ -10,7 +10,6 @@ import { getAllProjects, getAllTestimonials, getAllEducations } from '@/services
 
 export default async function Home() {
   const projects = await getAllProjects()
-  const testimonials = await getAllTestimonials()
   const educations = await getAllEducations()
 
   return (

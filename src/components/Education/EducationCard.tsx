@@ -1,7 +1,5 @@
 import { Education } from '@/lib/types'
 import { isInViewport } from '@/utils'
-import { StarIcon } from '@/utils/icons'
-import Image from 'next/image'
 import { FC, useEffect, useRef } from 'react'
 
 interface EducationCardProps {

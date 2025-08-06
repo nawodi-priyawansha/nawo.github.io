@@ -1,5 +1,3 @@
-import { footerLinks, languages } from '@/appData'
-import { socials } from '@/appData/personal'
 import { Socials } from "@/appData/index"
 
 import Logo from '../Navbar/Logo'

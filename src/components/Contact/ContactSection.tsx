@@ -1,7 +1,6 @@
 import { MsgIcon, PhoneIcon, MapIcon } from '@/utils/icons'
-import { footerLinks, languages } from '@/appData'
+import { languages } from '@/appData'
 import ContactForm from './ContactForm'
-import LocationIcon from '@/assets/icons/location.png'
 
 
 const ContactSection = () => {

@@ -7,7 +7,7 @@ import {
   NodejsIcon,
   ReactIcon,
   SocketIcon,
-  TailwindCSS,
+  // TailwindCSS,
   TypescriptIcon,
   HTMLIcon,
   CSSIcon,
@@ -42,8 +42,8 @@ import {
   SEOIcon,
   WebDevelopmentIcon,
 } from '../utils/icons'
-import { Codepen, Facebook, GithubIcon, Instagram, LinkedIn, X, MailIcon } from '@/utils/icons'
-import Image from 'next/image';
+import { GithubIcon, LinkedIn, MailIcon } from '@/utils/icons'
+// import Image from 'next/image';
 
 // Project Data
 export const projects = [

@@ -1,7 +1,5 @@
 // components/Socials/FixedSocials.tsx
 'use client'
-
-import { socials } from '@/appData/personal'
 import { Socials } from "@/appData/index"
 
 

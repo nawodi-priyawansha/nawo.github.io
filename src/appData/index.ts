@@ -137,35 +137,35 @@ export const serviceData = [
 export const skillList = [
   {
     name: 'JavaScript',
-    icon: JavaScriptIcon,
+    icon: JavaScriptIcon.src,
   },
   {
     name: 'TypeScript',
-    icon: TypescriptIcon,
+    icon: TypescriptIcon.src,
   },
   {
     name: 'React.js',
-    icon: ReactIcon,
+    icon: ReactIcon.src,
   },
   {
     name: 'Next.js',
-    icon: NextjsIcon,
+    icon: NextjsIcon.src,
   },
   {
     name: 'Node.js',
-    icon: NodejsIcon,
+    icon: NodejsIcon.src,
   },
   {
     name: 'Express.js',
-    icon: ExpressjsIcon,
+    icon: ExpressjsIcon.src,
   },
   {
     name: 'Nest.js',
-    icon: NestjsIcon,
+    icon: NestjsIcon.src,
   },
   {
     name: 'Socket.io',
-    icon: SocketIcon,
+    icon: SocketIcon.src,
   },
 ]
 

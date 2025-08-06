@@ -16,7 +16,8 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
           <span
             key={index}
             className="font-inter text-primary-content flex items-center text-xs lg:text-base">
-            <Image src={icon} alt={name} className="mx-2 size-11 lg:size-14" />
+            <Image src={icon} alt={name}  width={56} // Approx for size-14 (14 * 4px)
+              height={56} className="mx-2 size-11 lg:size-14" />
             {name}
           </span>
         ))}

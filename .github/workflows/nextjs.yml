@@ -53,6 +53,10 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      
+      - name: Load env.prod
+        run: cp env.prod .env
+        
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:

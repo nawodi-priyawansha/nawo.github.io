@@ -20,6 +20,10 @@ jobs:
         with:
           node-version: 18
 
+      - name: Create .env.production file
+        run: |
+          echo "NEXT_PUBLIC_SITE_URL=https://nawodi-priyawansha.github.io/nawo.github.io" >> .env.prod
+
       - name: Install dependencies
         run: npm install
 

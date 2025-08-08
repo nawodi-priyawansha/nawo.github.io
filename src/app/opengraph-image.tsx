@@ -1,6 +1,5 @@
+// app/opengraph-image/route.ts
 import { ImageResponse } from 'next/og'
-
-export const runtime = 'edge'
 
 // Image metadata
 export const alt = 'SOLOPRENEUR'
@@ -12,7 +11,17 @@ export const size = {
 
 export const contentType = 'image/png'
 
+// Set runtime based on environment variable
+export const runtime =
+  process.env.DISABLE_OG_IMAGE === 'true' ? 'node' : 'edge'
+
 export default async function Image() {
+  // When disabled (for static export), return simple response
+  if (process.env.DISABLE_OG_IMAGE === 'true') {
+    return new Response('OpenGraph image disabled for static export')
+  }
+
+  // Normal OG image generation
   return new ImageResponse(
     (
       <div
@@ -25,7 +34,8 @@ export default async function Image() {
           alignItems: 'center',
           justifyContent: 'center',
           padding: '1rem',
-        }}>
+        }}
+      >
         <h1 style={{ fontSize: 32, color: '#18f2e5', margin: 0 }}>
           Nawodi Priyawansha | Full-Stack Web Developer
         </h1>
@@ -34,9 +44,8 @@ export default async function Image() {
         </h2>
       </div>
     ),
-    // ImageResponse options
     {
       ...size,
-    },
+    }
   )
 }

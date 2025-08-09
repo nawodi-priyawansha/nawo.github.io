@@ -2,20 +2,20 @@
 
 [data-theme='light'] {
   --p: #fff;
-  --pc: #0d1a3b;
-  --s: #edeaf4;
-  --sc: #0d1a3b;
-  --tc: #6b7c93;
-  --a: #5565e8;
-  --n: #0d1a3b;
+  --pc: #4a2b5a;
+  --s: #f3edf9;
+  --sc: #4a2b5a;
+  --tc: #6b5e77;
+  --a: #b18cd9;
+  --n: #4a2b5a;
 
-  --b: #dfdcdc;
-  --marquee: #dbe3f7;
+  --b: #f2edf5;
+  --marquee: #e8dff3;
 
   /* for logo */
-  --gradient-start: #5565e8;
-  --gradient-mid: #18f2e5;
-  --gradient-end: #dbe3f7;
+  --gradient-start: #b18cd9;
+  --gradient-mid: #c6a7e8;
+  --gradient-end: #f2edf5;
 }
 
 [data-theme='dark'] {

@@ -29,15 +29,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
     <div className="bg-secondary border-border flex flex-col justify-between rounded-[14px] border p-5">
       <div className="flex items-start justify-between gap-2">
         <div className="flex-1">
-          <div className="flex flex-col flex-wrap gap-3 sm:flex-row sm:items-center">
+          <div className="flex flex-col gap-3">
             <h3 className="text-secondary-content text-lg font-medium md:font-semibold">{title}</h3>
             {type && (
               <span
-                className={`h-7 w-fit rounded-md bg-[#FFFFFF1A] p-1 text-sm ${type === 'New 🔥' ? 'animate-blink text-tag' : 'text-accent'} backdrop-blur-[80px]`}>
+                className={`h-7 w-fit rounded-md bg-[#FFFFFF1A] p-1 text-sm ${
+                  type === 'New 🔥' ? 'animate-blink text-tag' : 'text-accent'
+                } backdrop-blur-[80px]`}>
                 {type}
               </span>
             )}
           </div>
+
           {/* <ul className="mt-3 flex flex-col flex-wrap gap-2 sm:flex-row sm:gap-4">
             {(visitors || numberOfSales) && (
               <IconText text={(visitors || numberOfSales)?.toString() || ''} icon={Likes} />
@@ -48,7 +51,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
               <IconText text={(ratings || githubStars)?.toString() || ''} icon={Star} />
             )}
           </ul> */}
-          <ul className="mt-3 flex flex-col flex-wrap gap-2 sm:flex-row sm:gap-4">
+          
+        </div>
+        <figure className="flex justify-end overflow-hidden">
+          <Image
+            src={cover}
+            width={150}
+            height={80}
+            alt="Project Cover"
+            className="h-[80px] w-[150px] rounded-md object-cover shadow-[0px_1.66px_3.74px_-1.25px_#18274B1F]"
+          />
+        </figure>
+      </div>
+
+      <div>
+        <ul className="mt-3 flex flex-row flex-wrap gap-2 sm:flex-row sm:gap-4">
             {technologies?.map((tech) => {
               const icon = technologyIconMap[tech.toLowerCase()]
 
@@ -65,19 +82,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
               )
             })}
           </ul>
-        </div>
-        <figure className="flex justify-end overflow-hidden">
-          <Image
-            src={cover}
-            width={150}
-            height={80}
-            alt="Project Cover"
-            className="h-[80px] w-[150px] rounded-md object-cover shadow-[0px_1.66px_3.74px_-1.25px_#18274B1F]"
-          />
-        </figure>
-      </div>
-
-      <div>
         <div className="bg-primary text-primary-content my-4 h-[100px] overflow-scroll rounded-2xl px-4 py-2">
           <p className="text-[14px] font-normal md:text-base">{shortDescription}</p>
         </div>

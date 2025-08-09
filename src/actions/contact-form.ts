@@ -1,4 +1,4 @@
-'use server'
+//'use server'
 
 const action = async (_: { success: boolean; message: string } | null, formData: FormData) => {
   try {
@@ -30,7 +30,7 @@ const action = async (_: { success: boolean; message: string } | null, formData:
         message: 'Please provide a message.',
       }
 
-    const res = await fetch(process.env.CONTACT_FORM_ACTION_URL!, {
+    const res = await fetch(process.env.NEXT_PUBLIC_CONTACT_FORM_ACTION_URL!, {
       method: 'POST',
       body: formData,
       headers: {

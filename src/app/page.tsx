@@ -7,13 +7,17 @@ import About from '@/components/About/About'
 import Skills from '@/components/Skills/Skills'
 import Experience from '@/components/Experience/Experience'
 import { getAllProjects, getAllEducations } from '@/services'
+import BackgroundParticles from '@/components/Background/bg-particles'
+
 
 export default async function Home() {
   const projects = await getAllProjects()
+  
   const educations = await getAllEducations()
 
   return (
     <main>
+      <BackgroundParticles />
       <Hero />
       <Skills skills={skillList} />
       <div className="mx-auto my-8 max-w-[1300px] px-4 md:my-[3.75rem]">

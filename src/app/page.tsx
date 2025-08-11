@@ -17,7 +17,6 @@ export default async function Home() {
 
   return (
     <main>
-      <BackgroundParticles />
       <Hero />
       <Skills skills={skillList} />
       <div className="mx-auto my-8 max-w-[1300px] px-4 md:my-[3.75rem]">

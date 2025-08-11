@@ -7,7 +7,7 @@ import About from '@/components/About/About'
 import Skills from '@/components/Skills/Skills'
 import Experience from '@/components/Experience/Experience'
 import { getAllProjects, getAllEducations } from '@/services'
-import BackgroundParticles from '@/components/Background/bg-particles'
+//import BackgroundParticles from '@/components/Background/bg-particles'
 
 
 export default async function Home() {
